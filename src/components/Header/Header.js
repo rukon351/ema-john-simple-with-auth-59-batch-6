@@ -5,7 +5,7 @@ import logo from '../../images/Logo.svg';
 import './Header.css';
 
 const Header = () => {
-    // const [data] = useContext(AuthContext);
+const {user} = useContext(AuthContext);
     return (
         <nav className='header'>
             <Link to="/">
@@ -18,7 +18,7 @@ const Header = () => {
                 <Link to="/about">About</Link>
                 <Link to='/login'>Login</Link>
                 <Link to='/signup'>Sign Up</Link>
-                {/* {data.email} */}
+                {user?.email}
             </div>
         </nav>
     );
